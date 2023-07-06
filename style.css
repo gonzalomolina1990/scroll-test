@@ -1,0 +1,52 @@
+body{
+    margin: 0;
+    padding: 0;
+}
+
+section{
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+    padding: 10vw;
+}
+
+h1, p{
+    display: block;
+}
+
+
+.section1{
+    background-color: red;
+}
+
+.section2{
+    background-color: aqua;
+}
+
+.section3{
+    background-color: yellowgreen;
+}
+
+.section4{
+    background-color: yellow;
+}
+
+.scroller-up{
+    width: 2rem;
+    height: 2rem;
+    border-radius: 2rem 2rem 0 0;
+    background-color: black;
+    position:fixed;
+    top: 48vh;
+    right: 2rem;
+}
+
+.scroller-down{
+    width: 2rem;
+    height: 2rem;
+    border-radius: 0 0 2rem 2rem ;
+    background-color: white;
+    position:fixed;
+    top: 52vh;
+    right: 2rem;
+}
