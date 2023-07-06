@@ -15,10 +15,8 @@ document.querySelectorAll("section").forEach(element => {
 document.querySelector(".scroller-up").addEventListener("click", ()=>{
     if (currentScroll > -1) {
         currentScroll--;
-        console.log(1, currentScroll);
     } else{
         currentScroll = sections.length-2;
-        console.log(2, currentScroll);
 
     }
     sections[currentScroll+1].scrollIntoView({ behavior: 'smooth' });
