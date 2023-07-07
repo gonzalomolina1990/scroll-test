@@ -33,3 +33,20 @@ document.querySelector(".scroller-down").addEventListener("click", ()=>{
 
 });
 
+const elements = document.querySelectorAll('.animate-me');
+
+const observer = new IntersectionObserver(entries => {
+  entries.forEach(entry => {
+    if (entry.isIntersecting) {
+      entry.target.classList.add('entering');
+    } else {
+      entry.target.classList.remove('entering');
+    }
+  });
+});
+
+elements.forEach(element => {
+  observer.observe(element);
+});
+
+
