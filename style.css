@@ -1,16 +1,40 @@
 body{
     margin: 0;
     padding: 0;
+    font-family: 'Roboto', sans-serif;
 }
 
 section{
     height: 100vh;
     display: flex;
     flex-direction: column;
-    padding: 10vw;
+    padding: 20vh 20vw;
 }
 
-h1, p{
+nav {
+    position: fixed;
+    display: flex;
+    flex-direction: column;
+    background-color: black;
+}
+
+nav ul {
+    display: flex;
+    flex-direction: row;
+    width: 100vw;
+    justify-content: space-evenly;
+    list-style: none;
+    padding: 0;
+
+}
+
+a{
+    text-decoration: none;
+    color: white
+
+}
+
+h1, p, .img-container{
     display: block;
     opacity: 0;
     left: -10rem;
@@ -18,41 +42,65 @@ h1, p{
 
 }
 
-
-.section1{
-    background-color: red;
+.img-container{
+    max-width: 30vw;
 }
 
-.section2{
-    background-color: aqua;
+#profile{
+    border-radius: 10%;
+    width: 100%;
+
+
 }
 
-.section3{
-    background-color: yellowgreen;
+.img-fluid {
+  max-width: 100%;
+  height: auto;
 }
 
-.section4{
-    background-color: yellow;
+
+#section1{
+    background: rgb(171,220,255);
+    background: linear-gradient(45deg, rgba(171,220,255,1) 0%, rgba(3,150,255,1) 100%);
+}
+
+#section2{
+    background: rgb(255,246,183);
+background: linear-gradient(45deg, rgba(255,246,183,1) 0%, rgba(246,65,108,1) 100%);
+
+}
+
+#section3{
+    background: rgb(206,159,252);
+    background: linear-gradient(45deg, rgba(206,159,252,1) 0%, rgba(115,103,240,1) 100%);
+}
+
+#section4{
+    background: rgb(129,251,184);
+    background: linear-gradient(45deg, rgba(129,251,184,1) 0%, rgba(40,199,111,1) 100%);
+}
+
+.scroller{
+    width: 2rem;
+    height: 2rem;
+    position:fixed;
+    right: 1rem;
+    font-size: 2rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+    background-color: black;
+    color: white;
+    border-radius: 50%;
 }
 
 .scroller-up{
-    width: 2rem;
-    height: 2rem;
-    border-radius: 2rem 2rem 0 0;
-    background-color: black;
-    position:fixed;
-    top: 48vh;
-    right: 2rem;
+    top: 47vh;
 }
 
 .scroller-down{
-    width: 2rem;
-    height: 2rem;
-    border-radius: 0 0 2rem 2rem ;
-    background-color: white;
-    position:fixed;
-    top: 52vh;
-    right: 2rem;
+    top: 53vh;
 }
 
 .entering {
@@ -68,4 +116,14 @@ h1, p{
       opacity: 1;
       left: 0rem;
     }
+  }
+
+
+
+  .material-symbols-outlined {
+    font-variation-settings:
+    'FILL' 0,
+    'wght' 900,
+    'GRAD' 0,
+    'opsz' 48
   }

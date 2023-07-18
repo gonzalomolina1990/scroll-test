@@ -4,46 +4,72 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="style.css">
-    <title>Document</title>
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200" />
+    <title>Gonzalo Molina</title>
 </head>
+
+<nav>
+    <ul>
+        <li><a href="#section1">About</a></li>
+        <li><a href="#section2">Work</a></li>
+        <li><a href="#section3">Skills</a></li>
+        <li><a href="#section4">Contact</a></li>
+    </ul>
+</nav>
 <body>
 
-    <div class="scroller-up"></div>
-    <div class="scroller-down"></div>
+    <div class="scroller scroller-up">
+        <span class="material-symbols-outlined">expand_less</span>
+    </div>
+    <div class="scroller scroller-down">
+        <span class="material-symbols-outlined">expand_more</span>
+    </div>
 
-    <section class="section1">
-        <h1 class="animate-me">Title</h1>
+    <section id="section1">
+        <h1 class="animate-me">About</h1>
+        <div class="img-container animate-me">
+            <img id="profile" src="./img/perfil.jpg" alt="profile_photo">
+        </div>
+        <p class="animate-me">
+            Hi, I'm Gonzalo Molina. 33 years old with 3 years of experience as a full stack developer and 7 years as a marketing manager
+        </p>
+
+        <p class="animate-me">
+            Currently I'm based in Uruguay working as a Frontend Developer but looking forward to work remote
+        </p>
+
+        
+        <p class="animate-me">
+            I have several skills in graphic and video design from my time as a marketing manager that can enhance my value as a full stack developer
+        </p>
+    </section>
+
+    <section id="section2">
+        <h1 class="animate-me">Work</h1>
+        <p class="animate-me">Projects I've been involved into
+        </p>
+        <div class="gallery">
+
+        </div>
+    </section>
+
+    <section id="section3">
+        <h1 class="animate-me">Skills</h1>
         <p class="animate-me">Lorem, ipsum dolor sit amet consectetur adipisicing elit. Fugiat, aut. 
             Eaque, dicta cupiditate deleniti ducimus quaerat temporibus aliquid saepe enim, 
             fugiat consequuntur adipisci, expedita amet. Officiis architecto illo fugiat corporis?
         </p>
     </section>
 
-    <section class="section2">
-        <h1 class="animate-me">Title</h1>
+    <section id="section4">
+        <h1 class="animate-me">Contact</h1>
         <p class="animate-me">Lorem, ipsum dolor sit amet consectetur adipisicing elit. Fugiat, aut. 
             Eaque, dicta cupiditate deleniti ducimus quaerat temporibus aliquid saepe enim, 
             fugiat consequuntur adipisci, expedita amet. Officiis architecto illo fugiat corporis?
         </p>
     </section>
 
-    <section class="section3">
-        <h1 class="animate-me">Title</h1>
-        <p class="animate-me">Lorem, ipsum dolor sit amet consectetur adipisicing elit. Fugiat, aut. 
-            Eaque, dicta cupiditate deleniti ducimus quaerat temporibus aliquid saepe enim, 
-            fugiat consequuntur adipisci, expedita amet. Officiis architecto illo fugiat corporis?
-        </p>
-    </section>
 
-    <section class="section4">
-        <h1 class="animate-me">Title</h1>
-        <p class="animate-me">Lorem, ipsum dolor sit amet consectetur adipisicing elit. Fugiat, aut. 
-            Eaque, dicta cupiditate deleniti ducimus quaerat temporibus aliquid saepe enim, 
-            fugiat consequuntur adipisci, expedita amet. Officiis architecto illo fugiat corporis?
-        </p>
-    </section>
-
-    
     <script src="main.js"></script>
 </body>
 </html>
