@@ -8,7 +8,8 @@ section{
     height: 100vh;
     display: flex;
     flex-direction: column;
-    padding: 20vh 20vw;
+    padding: 10vh 10vw;
+    justify-content: center;
 }
 
 nav {
@@ -16,6 +17,7 @@ nav {
     display: flex;
     flex-direction: column;
     background-color: black;
+    z-index: 10;
 }
 
 nav ul {
@@ -35,7 +37,8 @@ a{
 }
 
 h1, p, .img-container{
-    display: block;
+    display: flex;
+    flex-direction: column;
     opacity: 0;
     position: relative;
 
@@ -43,7 +46,18 @@ h1, p, .img-container{
 
 .img-container{
     max-width: 50%;
+    padding: 4rem;
 }
+
+.skill-container{
+    padding: 1rem;
+}
+
+.skill-container p{
+    align-items: center;
+}
+
+
 
 #profile{
     border-radius: 10%;
@@ -82,6 +96,8 @@ background: linear-gradient(45deg, rgba(255,246,183,1) 0%, rgba(246,65,108,1) 10
     display: flex;
     flex-direction: row;
     align-items: center;
+    flex-wrap: wrap;
+    justify-content: space-between;
 }
 
 .skill{
@@ -115,6 +131,7 @@ background: linear-gradient(45deg, rgba(255,246,183,1) 0%, rgba(246,65,108,1) 10
     background-color: black;
     color: white;
     border-radius: 50%;
+    z-index: 5;
 }
 
 .scroller-up{
@@ -173,14 +190,26 @@ background: linear-gradient(45deg, rgba(255,246,183,1) 0%, rgba(246,65,108,1) 10
         align-items: center;
     }
 
-    .skills-container{
+    .skill{
+        padding: 0.25rem;
+        width: 4rem;
+    }
+
+    .skill-container {
+        padding: 0.25rem;
         display: flex;
         flex-direction: column;
         align-items: center;
     }
 
-    .skill{
-        width: 3rem;
+    .about-text {
+        width: 75%;
+        padding: 0rem 1rem;
+    }
+
+    .img-container {
+        max-width: 70%;
+        padding: 1rem;
     }
 
 
