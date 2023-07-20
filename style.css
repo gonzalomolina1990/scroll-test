@@ -37,20 +37,18 @@ a{
 h1, p, .img-container{
     display: block;
     opacity: 0;
-    left: -10rem;
     position: relative;
 
 }
 
 .img-container{
-    max-width: 30vw;
+    max-width: 50%;
 }
 
 #profile{
     border-radius: 10%;
     width: 100%;
-
-
+    max-width: 20rem;
 }
 
 .img-fluid {
@@ -58,6 +56,16 @@ h1, p, .img-container{
   height: auto;
 }
 
+.about-text{
+    width: 50%;
+    padding: 0rem 1rem;
+}
+
+.about-container{
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+}
 
 #section1{
     background: rgb(171,220,255);
@@ -69,6 +77,20 @@ h1, p, .img-container{
 background: linear-gradient(45deg, rgba(255,246,183,1) 0%, rgba(246,65,108,1) 100%);
 
 }
+
+.skills-container{
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+}
+
+.skill{
+    border-radius: 10%;
+    width: 100%;
+    max-width: 20rem;
+    padding: 1rem;
+}
+
 
 #section3{
     background: rgb(206,159,252);
@@ -106,6 +128,10 @@ background: linear-gradient(45deg, rgba(255,246,183,1) 0%, rgba(246,65,108,1) 10
 .entering {
     animation: entering 2s forwards;
   }
+
+  .popping {
+    animation: popping 2s forwards;
+  }
   
   @keyframes entering {
     0% {
@@ -118,6 +144,17 @@ background: linear-gradient(45deg, rgba(255,246,183,1) 0%, rgba(246,65,108,1) 10
     }
   }
 
+  @keyframes popping {
+    0% {
+      opacity: 0;
+      scale: 0;
+    }
+    100% {
+      opacity: 1;
+      scale: 1;
+    }
+  }
+
 
 
   .material-symbols-outlined {
@@ -126,4 +163,25 @@ background: linear-gradient(45deg, rgba(255,246,183,1) 0%, rgba(246,65,108,1) 10
     'wght' 900,
     'GRAD' 0,
     'opsz' 48
+  }
+
+
+  @media only screen and (max-width: 768px) {
+    .about-container, .about-text{
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .skills-container{
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .skill{
+        width: 3rem;
+    }
+
+
   }

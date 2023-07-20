@@ -35,6 +35,9 @@ document.querySelector(".scroller-down").addEventListener("click", ()=>{
 
 const elements = document.querySelectorAll('.animate-me');
 
+const poppingElements = document.querySelectorAll('.pop-me');
+
+
 const observer = new IntersectionObserver(entries => {
   entries.forEach(entry => {
     if (entry.isIntersecting) {
@@ -47,6 +50,22 @@ const observer = new IntersectionObserver(entries => {
 
 elements.forEach(element => {
   observer.observe(element);
+});
+
+
+const observer2 = new IntersectionObserver(entries => {
+  entries.forEach(entry => {
+    if (entry.isIntersecting) {
+      entry.target.classList.add('popping');
+    } else {
+      entry.target.classList.remove('popping');
+    }
+  });
+});
+
+
+poppingElements.forEach(element => {
+  observer2.observe(element);
 });
 
 
