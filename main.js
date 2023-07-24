@@ -93,3 +93,23 @@ document.getElementById("contactForm").addEventListener("submit", function(event
       alert("An error occurred while sending the email. Please try again later.");
     });
 });
+
+
+const barFill = document.querySelectorAll('.skill-bar-fill');
+
+const observer3 = new IntersectionObserver(entries => {
+  entries.forEach(entry => {
+    if (entry.isIntersecting) {
+      const fillPercentage = entry.target.getAttribute('data-fill');
+      console.log(fillPercentage)
+      entry.target.style.setProperty("width", `${fillPercentage}`)
+    } else {
+      entry.target.style.setProperty("width", "0%")
+    }
+  });
+});
+
+
+barFill.forEach(element => {
+  observer3.observe(element);
+});
