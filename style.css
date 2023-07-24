@@ -100,7 +100,7 @@ background: linear-gradient(45deg, rgba(255,246,183,1) 0%, rgba(246,65,108,1) 10
     align-items: center;
     flex-wrap: wrap;
     justify-content: space-between;
-    margin-top: 2rem;
+    margin-top: 1rem;
 }
 
 .card{
@@ -235,6 +235,34 @@ background: linear-gradient(45deg, rgba(255,246,183,1) 0%, rgba(246,65,108,1) 10
     background: linear-gradient(45deg, rgba(129,251,184,1) 0%, rgba(40,199,111,1) 100%);
 }
 
+label,
+input,
+textarea {
+  display: block;
+  margin-bottom: 10px;
+}
+
+input,
+textarea {
+  width: 100%;
+  padding: 10px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+}
+
+button {
+  background-color: #4CAF50;
+  color: white;
+  padding: 10px 20px;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+button:hover {
+  background-color: #45a049;
+}
+
 .scroller{
     width: 2rem;
     height: 2rem;
@@ -298,6 +326,14 @@ background: linear-gradient(45deg, rgba(255,246,183,1) 0%, rgba(246,65,108,1) 10
     'GRAD' 0,
     'opsz' 48
   }
+
+
+
+
+
+
+
+
 
 
   @media only screen and (max-width: 768px) {

@@ -68,4 +68,28 @@ poppingElements.forEach(element => {
   observer2.observe(element);
 });
 
+// Initialize EmailJS with your User ID
+emailjs.init("uPQB2vUvFUlp3ktNZ");
 
+document.getElementById("contactForm").addEventListener("submit", function(event) {
+  event.preventDefault();
+
+  const name = document.getElementById("name").value;
+  const email = document.getElementById("email").value;
+  const message = document.getElementById("message").value;
+
+  const templateParams = {
+    from_name: name,
+    from_email: email,
+    message: message
+  };
+
+  // Send email using EmailJS API
+  emailjs.send("service_arcwefm", "template_hjfr713", templateParams)
+    .then(function(response) {
+      alert("Email sent successfully!");
+    }, function(error) {
+      console.error("Error sending email:", error);
+      alert("An error occurred while sending the email. Please try again later.");
+    });
+});

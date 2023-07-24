@@ -237,12 +237,23 @@
 
     <section id="section4">
         <h1 class="animate-me">Contact</h1>
-        <p class="animate-me">Lorem, ipsum dolor sit amet consectetur adipisicing elit. Fugiat, aut. 
-            Eaque, dicta cupiditate deleniti ducimus quaerat temporibus aliquid saepe enim, 
-            fugiat consequuntur adipisci, expedita amet. Officiis architecto illo fugiat corporis?
-        </p>
+
+        <form id="contactForm">
+            <label for="name">Name:</label>
+            <input type="text" id="name" name="name" required>
+      
+            <label for="email">Email:</label>
+            <input type="email" id="email" name="email" required>
+      
+            <label for="message">Message:</label>
+            <textarea id="message" name="message" rows="4" required></textarea>
+      
+            <button type="submit">Submit</button>
+          </form>
+    
     </section>
 
+    <script src="https://cdn.emailjs.com/dist/email.min.js"></script>
 
     <script src="main.js"></script>
 </body>
