@@ -56,9 +56,13 @@ elements.forEach(element => {
 const observer2 = new IntersectionObserver(entries => {
   entries.forEach(entry => {
     if (entry.isIntersecting) {
-      entry.target.classList.add('popping');
+      setTimeout(() => {
+        entry.target.classList.add('popping');
+      }, 500);
     } else {
-      entry.target.classList.remove('popping');
+      setTimeout(() => {
+        entry.target.classList.add('popping');
+      }, 500);
     }
   });
 });
@@ -101,7 +105,6 @@ const observer3 = new IntersectionObserver(entries => {
   entries.forEach(entry => {
     if (entry.isIntersecting) {
       const fillPercentage = entry.target.getAttribute('data-fill');
-      console.log(fillPercentage)
       entry.target.style.setProperty("width", `${fillPercentage}`)
     } else {
       entry.target.style.setProperty("width", "0%")
