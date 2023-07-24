@@ -84,7 +84,7 @@ document.getElementById("contactForm").addEventListener("submit", function(event
     message: message
   };
 
-  // Send email using EmailJS API
+  // Send email using EmailJS API/
   emailjs.send("service_arcwefm", "template_hjfr713", templateParams)
     .then(function(response) {
       alert("Email sent successfully!");
