@@ -333,6 +333,11 @@ button:hover {
     'opsz' 48
   }
 
+  .material-symbols-outlined {
+    pointer-events: none;
+  }
+
+
 
 
 
