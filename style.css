@@ -6,10 +6,12 @@ body{
 
 section{
     height: 100vh;
+    max-height: max-content;
     display: flex;
     flex-direction: column;
     padding: 10vh 10vw;
-    justify-content: center;
+    justify-content: flex-start;
+    overflow: hidden;
 }
 
 nav {
@@ -90,6 +92,121 @@ h1, p, .img-container{
     background: rgb(255,246,183);
 background: linear-gradient(45deg, rgba(255,246,183,1) 0%, rgba(246,65,108,1) 100%);
 
+}
+
+.gallery{
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    margin-top: 2rem;
+}
+
+.card{
+    background-color: rgba(255,255,255,.3);
+    box-shadow: 0.2rem 0.2rem 2rem rgba(0, 0, 0, .3);
+    border-radius: 1rem;
+    max-width: 18rem;
+    margin-top: 1rem;
+}
+
+.card:hover{
+    transform: scale(1.05);
+}
+
+.card-img{
+    background-repeat: no-repeat;
+    height: 5rem;
+    border-radius: 1rem 1rem 0rem 0rem;
+}
+
+.card-1{
+    background-image: url(img/projects/electrohack.jpg);
+}
+
+.card-2{
+    background-image: url(img/projects/gonzaflix.jpg);
+}
+
+.card-3{
+    background-image: url(img/projects/candelas.jpg);
+}
+
+.card-4{
+    background-image: url(img/projects/todolist.jpg);
+}
+
+.card-5{
+    background-image: url(img/projects/ballgame.jpg);
+}
+
+.card-6{
+    background-image: url(img/projects/forum.jpg);
+}
+
+.card-7{
+    background-image: url(img/projects/grid.jpg);
+}
+
+
+
+.card-content{
+    padding:1rem;
+    border-radius: 0rem 0rem 1rem 1rem;
+    background-color: rgba(255,255,255,.3);
+
+}
+
+.card-content div {
+    font-size: 0.8rem;
+    margin-top: 1rem;
+}
+
+.card-technologies{
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    padding: 1rem;
+    margin-top: 0 !important;
+}
+
+.card-icon{
+    height: 2rem;
+    width: 2rem;
+    border-radius: 20%;
+}
+
+.card-html{
+    background-image: url(img/skills/html.png);
+    background-size: contain;
+    background-position: center;
+}
+
+.card-css{
+    background-image: url(img/skills/css.png);
+    background-size: contain;
+    background-position: center;
+}
+
+.card-js{
+    background-image: url(img/skills/js.png);
+    background-size: contain;
+    background-position: center;
+}
+
+.card-react{
+    background-image: url(img/skills/react.png);
+    background-size: contain;
+    background-position: center;
+}
+
+.card-mongo{
+    background-image: url(img/skills/mongo.png);
+    background-size: contain;
+    background-position: center;
 }
 
 .skills-container{
@@ -184,7 +301,16 @@ background: linear-gradient(45deg, rgba(255,246,183,1) 0%, rgba(246,65,108,1) 10
 
 
   @media only screen and (max-width: 768px) {
-    .about-container, .about-text{
+
+
+    .popping {
+        animation: popping 0s forwards;
+      }
+
+    section{
+        height: max-content;
+    }
+    .about-container, .about-text, .gallery{
         display: flex;
         flex-direction: column;
         align-items: center;
@@ -212,5 +338,33 @@ background: linear-gradient(45deg, rgba(255,246,183,1) 0%, rgba(246,65,108,1) 10
         padding: 1rem;
     }
 
+    .card {
+        width: 100%;
+        max-width: 100%;
+        height: auto;
+        margin-bottom: 1rem;
+    }
+
+    .card-img{
+        background-size: cover;
+    }
+
+    .card>div{
+        margin: 0rem;
+        padding: 0.5rem;
+    }
+
+    .card h4{
+        margin: 0;
+        padding: 0;
+    }
+
+    .card-technologies{
+        padding: 0.2rem;
+    }
+
+
+    
+    
 
   }
