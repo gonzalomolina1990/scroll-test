@@ -98,21 +98,18 @@ document.getElementById("contactForm").addEventListener("submit", function(event
     });
 });
 
-
-const barFill = document.querySelectorAll('.skill-bar-fill');
-
 const observer3 = new IntersectionObserver(entries => {
   entries.forEach(entry => {
     if (entry.isIntersecting) {
-      const fillPercentage = entry.target.getAttribute('data-fill');
-      entry.target.style.setProperty("width", `${fillPercentage}`)
+      const fillPercentage = entry.target.querySelector('.skill-bar-fill').getAttribute('data-fill');
+      entry.target.querySelector('.skill-bar-fill').style.width = fillPercentage;
     } else {
-      entry.target.style.setProperty("width", "0%")
+      entry.target.querySelector('.skill-bar-fill').style.width = '0%';
     }
   });
 });
 
-
-barFill.forEach(element => {
-  observer3.observe(element);
+const skillContainers = document.querySelectorAll('.skill-container');
+skillContainers.forEach(container => {
+  observer3.observe(container);
 });
